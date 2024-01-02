@@ -31,16 +31,17 @@ Create an IAM Role and attache it to EC2 instance
 
 STEP-4 
 Install terraform using Terraform documentation By using below commands.
-    wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
-    echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+   wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+   echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
     sudo apt update && sudo apt install terraform
 
 STEP-5
 Check the cluster wheather nodes are created or not by using command 
-         Kubectl get nodes
+        
+             Kubectl get nodes
 
 if you get any error we can update kubeconfig by using below command
-        aws eks update-kubeconfig --region us-east-1 --name eks-cluster
+           aws eks update-kubeconfig --region us-east-1 --name eks-cluster
 
 STEP-6
 Created nginx deployment, service and autoscale yaml files for deployment purpose once the application is deployed we can access the application by Dns name using load balancer.
