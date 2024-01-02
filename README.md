@@ -50,5 +50,5 @@ I have installed some packages for CRDS and Autoscaling
     cd autoscaler/vertical-pod-autoscaler/deploy/manifests
 
 Installing metrics 
-  kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+    kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 
