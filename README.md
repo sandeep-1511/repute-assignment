@@ -57,3 +57,8 @@ Installing metrics
    
                kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 
+
+to pressure load
+
+kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh -c "while true; do wget -q -O /dev/null http://hello-service & sleep 0.0001; done"
+
